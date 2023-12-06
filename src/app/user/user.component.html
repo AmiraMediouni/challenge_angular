@@ -1,1 +1,38 @@
-<p>user works!</p>
+<h1 [style.text-align]="'center'"> EXERCICE N° 2</h1>
+  <h2>Les informations de l'utilisateur sont : </h2>
+  <h3> Le nom est : {{name}}<br>
+  L'adresse mail est : {{email}}<br>
+  L'adresse est : {{address}}<br>
+  </h3>
+    <div *ngIf="displayHobbies; then thenBlock ;else elseBlock2">  </div>
+    <ng-template #thenBlock>
+    <button (click)="afficherHobbies()" [style.background-color]="'orange'" [style.margin]="'10px'">Afficher loisirs</button>
+
+    </ng-template>
+  
+    <ng-template #elseBlock2>
+    <button (click)="masquerHobbies()" [style.background-color]="'orange'" [style.margin]="'10px'">Masquer loisirs</button>
+    <h3>Les loisirs sont : <br></h3>
+    <h3 *ngFor="let hobby of hobbies , index as i">
+        le loisir n° {{i+1}} est : {{hobby}}     <button (click)="deleteHobbies(i)" [style.background-color]="'red'" [style.margin]="'10px'">Supprimer</button>
+        <br>
+      </h3>
+    </ng-template>
+    <br>
+      <form>
+      <div>
+      <label>Nom : </label>
+      <input  [(ngModel)]="name" type="text" name="name">
+   
+      </div><br>
+      <div>
+      <label>Email : </label>
+      <input  [(ngModel)]="email" type="mail" name="email">
+      </div><br>
+      <div>
+      <label>Adresse : </label>
+      <input  [(ngModel)]="address" type="text" name="address">
+ 
+      </div>     
+
+      </form>

@@ -2,15 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-area',
-  template: `<h1 [style.text-align]="'center'"> EXERCICE N° 1</h1>
-  <input #myInput type="number">
-  <button  (click)="calculCercle(myInput.value)" [style.background-color]="'orange'" [style.margin]="'10px'">Calculer cercle</button>
-  <button (click)="calculCarre(myInput.value)" [style.background-color]="'green'" [style.margin]="'10px'" >Calculer carré</button>
-  <br>{{resultat}}
-<br> <br>
-  
-  `,
-
+  templateUrl:'./area.component.html',
   styleUrls: ['./area.component.css']
 })
 export class AreaComponent {

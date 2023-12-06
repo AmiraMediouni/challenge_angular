@@ -3,29 +3,8 @@ import { article } from './article';
 
 @Component({
   selector: 'app-articles',
-  template: `
-  <h1 [style.text-align]="'center'"> EXERCICE N° 3</h1>
-  {{titre}}
-    <fieldset class="class1" *ngFor="let article of listeArticles , index as i">
-      
-      <legend >{{article.titre}} </legend>
-      <p>Auteur : {{article.auteur}} </p>
-      <p>Date : {{article.date}} </p>
-      <p>Contenu : {{article.contenu}} </p>
-     
-    </fieldset>
-    
-  `,
-  styles:[ `
-  .class1{
-    text-align:left;
-    border: solid 1px black;
-    margin: 0 auto;
-    width:500px
-  }
-  
-  `
-  ]
+  templateUrl:'./articles.component.html' ,
+  styleUrls:['./articles.component.css']
 })
 export class ArticlesComponent {
   public titre="Les articles du jour "

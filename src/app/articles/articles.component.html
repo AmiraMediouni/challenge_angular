@@ -1,1 +1,10 @@
-<p>articles works!</p>
+<h1 [style.text-align]="'center'"> EXERCICE N° 3</h1>
+  {{titre}}
+    <fieldset class="class1" *ngFor="let article of listeArticles , index as i">
+      
+      <legend >{{article.titre}} </legend>
+      <p>Auteur : {{article.auteur}} </p>
+      <p>Date : {{article.date}} </p>
+      <p>Contenu : {{article.contenu}} </p>
+     
+    </fieldset>
